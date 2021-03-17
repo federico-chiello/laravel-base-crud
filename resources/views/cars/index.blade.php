@@ -24,6 +24,7 @@
             <td>{{ $auto->color }}</td>
             <td>{{ $auto->price }}</td>
             <td>{{ $auto->description }}</td>
+            <td><a href="{{ route('cars.show', ['car' => $auto->id]) }}">Dettagli</a></td>
         </tr>    
         @endforeach
     </tbody>
