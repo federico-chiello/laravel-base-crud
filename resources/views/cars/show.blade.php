@@ -16,16 +16,14 @@
       </tr>
     </thead>
     <tbody>
-        @foreach ($automobile as $auto)
         <tr>
-            <th scope="row">{{ $auto->id }}</th>
-            <td>{{ $auto->brand }}</td>
-            <td>{{ $auto->model }}</td>
-            <td>{{ $auto->color }}</td>
-            <td>{{ $auto->price }}</td>
-            <td>{{ $auto->description }}</td>
+            <th scope="row">{{ $automobile->id }}</th>
+            <td>{{ $automobile->brand }}</td>
+            <td>{{ $automobile->model }}</td>
+            <td>{{ $automobile->color }}</td>
+            <td>{{ $automobile->price }}</td>
+            <td>{{ $automobile->description }}</td>
         </tr>    
-        @endforeach
     </tbody>
   </table>
   </table>
