@@ -11,15 +11,21 @@
         <th scope="col">Brand</th>
         <th scope="col">Model</th>
         <th scope="col">Color</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
+        @foreach ($automobile as $auto)
+        <tr>
+            <th scope="row">{{ $auto->id }}</th>
+            <td>{{ $auto->brand }}</td>
+            <td>{{ $auto->model }}</td>
+            <td>{{ $auto->color }}</td>
+            <td>{{ $auto->price }}</td>
+            <td>{{ $auto->description }}</td>
+        </tr>    
+        @endforeach
     </tbody>
   </table>
   </table>
