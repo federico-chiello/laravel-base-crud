@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Automobili')
+@section('title','Dettagli automobili')
 
 @section('content')
  <h1>Automobili</h1>
@@ -11,6 +11,8 @@
         <th scope="col">Brand</th>
         <th scope="col">Model</th>
         <th scope="col">Color</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
       </tr>
     </thead>
     <tbody>
@@ -20,7 +22,8 @@
             <td>{{ $auto->brand }}</td>
             <td>{{ $auto->model }}</td>
             <td>{{ $auto->color }}</td>
-            <td><a href="{{ route('cars.show', ['car'=>$auto->id])}}">Dettagli</a></td>
+            <td>{{ $auto->price }}</td>
+            <td>{{ $auto->description }}</td>
         </tr>    
         @endforeach
     </tbody>
