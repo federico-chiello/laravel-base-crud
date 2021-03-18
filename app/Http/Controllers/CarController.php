@@ -49,7 +49,8 @@ class CarController extends Controller
         $carNew->description = $data['description'];
         
         $carNew->save();
-        dd($carNew);
+        return redirect()->route('cars.index');
+
     }
 
     /**
