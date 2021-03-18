@@ -40,7 +40,16 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $carNew = new Car;
+        $carNew->brand = $data['brand'];
+        $carNew->model = $data['model'];
+        $carNew->color = $data['color'];
+        $carNew->price = $data['price'];
+        $carNew->description = $data['description'];
+        
+        $carNew->save();
+        dd($carNew);
     }
 
     /**
