@@ -49,7 +49,11 @@ class CarController extends Controller
         $carNew->description = $data['description'];
         
         $carNew->save();
-        return redirect()->route('cars.index');
+        //Reindirizza all'index
+        // return redirect()->route('cars.index');
+
+        //Reindirizza all'ultimo prodotto inserito
+        return redirect()->route('cars.show', $carNew->find($carNew->id));
 
     }
 
