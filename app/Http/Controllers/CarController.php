@@ -42,11 +42,15 @@ class CarController extends Controller
     {
         $data = $request->all();
         $carNew = new Car;
-        $carNew->brand = $data['brand'];
-        $carNew->model = $data['model'];
-        $carNew->color = $data['color'];
-        $carNew->price = $data['price'];
-        $carNew->description = $data['description'];
+        //Primo metodo
+        // $carNew->brand = $data['brand'];
+        // $carNew->model = $data['model'];
+        // $carNew->color = $data['color'];
+        // $carNew->price = $data['price'];
+        // $carNew->description = $data['description'];
+       
+        //Secondo metodo con fill
+        $carNew->fill($data);
         
         $carNew->save();
         //Reindirizza all'index
