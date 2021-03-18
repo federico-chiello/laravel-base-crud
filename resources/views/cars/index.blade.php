@@ -25,5 +25,5 @@
         @endforeach
     </tbody>
   </table>
-  </table>
+  <a href="{{ route('cars.create') }}">Inserisci un nuovo prodotto</a>
 @endsection
