@@ -5,15 +5,28 @@
 @section('content')
 <h1>Scegli l'automobile</h1>
 <div class="container">
-    <form>
+    <form action="{{route('cars.store')}}" method="post">
+        @csrf
+        @method('POST')
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <label for="inputBrand">Marca</label>
+          <input type="text" class="form-control" id="inputBrand" name="brand">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <label for="inputModel">Modello</label>
+          <input type="text" class="form-control" id="inputModel" name="model">
+        </div>
+        <div class="form-group">
+            <label for="inputColor">Colore</label>
+            <input type="text" class="form-control" id="inputColor" name="color">
+        </div>
+        <div class="form-group">
+            <label for="inputPrice">Prezzo</label>
+            <input type="text" class="form-control" id="inputPrice" name="price">
+        </div>
+        <div class="form-group">
+            <label for="inputDescription">Descrizione</label>
+            <input type="text" class="form-control" id="inputDescription" name="description">
         </div>
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
