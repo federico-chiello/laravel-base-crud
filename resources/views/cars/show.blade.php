@@ -3,7 +3,7 @@
 @section('title','Dettagli automobili')
 
 @section('content')
- <h1>Automobili</h1>
+ <h1>Dettagli automobile</h1>
  <table class="table">
     <thead class="thead-dark">
       <tr>
