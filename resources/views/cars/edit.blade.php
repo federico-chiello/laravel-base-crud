@@ -7,26 +7,26 @@
 <div class="container">
     <form action="" method="post">
         @csrf
-        @method('')
+        @method('POST')
         <div class="form-group">
           <label for="inputBrand">Marca</label>
-          <input type="text" class="form-control" id="inputBrand" name="brand">
+          <input type="text" class="form-control" id="inputBrand" name="brand" value="{{ $automobile->brand }}">
         </div>
         <div class="form-group">
           <label for="inputModel">Modello</label>
-          <input type="text" class="form-control" id="inputModel" name="model">
+          <input type="text" class="form-control" id="inputModel" name="model" value="{{ $automobile->model }}">
         </div>
         <div class="form-group">
             <label for="inputColor">Colore</label>
-            <input type="text" class="form-control" id="inputColor" name="color">
+            <input type="text" class="form-control" id="inputColor" name="color" value="{{ $automobile->color }}">
         </div>
         <div class="form-group">
             <label for="inputPrice">Prezzo</label>
-            <input type="text" class="form-control" id="inputPrice" name="price">
+            <input type="text" class="form-control" id="inputPrice" name="price" value="{{ $automobile->price }}">
         </div>
         <div class="form-group">
             <label for="inputDescription">Descrizione</label>
-            <input type="text" class="form-control" id="inputDescription" name="description">
+            <textarea class="form-control" id="inputDescription"  rows="3" name="description">{{ $automobile->description }}</textarea>
         </div>
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
