@@ -94,7 +94,7 @@ return [
     'numeric'              => "':attribute' deve essere un numero.",
     'present'              => "':attribute' deve essere presente.",
     'regex'                => "Il formato di ':attribute' non è valido.",
-    'required'             => "':attribute' è richiesto.",
+    'required'             => "Il campo ':attribute' è richiesto.",
     'required_if'          => "':attribute' è richiesto quando :other è :value.",
     'required_unless'      => "':attribute' è richiesto salvo che :other sia in :values.",
     'required_with'        => "':attribute' è richiesto quando :values è presente.",
