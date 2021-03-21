@@ -111,9 +111,16 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Car $car)
     {
-        //
+        if($car){
+            $data = [
+                'automobile' => $car
+            ];
+            return view('cars.edit', $data);
+        }
+
+        abort('404');
     }
 
     /**
