@@ -41,6 +41,15 @@ class CarController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+
+        $request->validate([
+            'brand' => 'required|unique:cars|max:255',
+            'model' => 'required|unique:cars|max:255',
+            'color' => 'required|max:15',
+            'price' => 'required|max:7',
+            'description' => 'required'
+        ]);
+
         $carNew = new Car;
         //Primo metodo
         // $carNew->brand = $data['brand'];
