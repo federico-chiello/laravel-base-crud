@@ -23,6 +23,11 @@
             <td>
               <a href="{{ route('cars.show', ['car'=>$auto->id])}}" class="btn btn-info">Dettagli</a>
               <a href="{{ route('cars.edit', ['car'=>$auto->id])}}" class="btn btn-warning">Modifica</a>
+              <form action="{{ route('cars.destroy', $auto->id) }}" method="post" class="d-inline-block">
+                @csrf
+                @method('delete')
+                <button class="btn btn-danger">Cancella</button>
+              </form>
             </td>
         </tr>    
         @endforeach
