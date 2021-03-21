@@ -76,19 +76,33 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        $automobili = Car::find($id);
 
-        if($automobili){
+    //Primo metodo con l'id
+    // public function show($id)
+    // {
+    //     $automobili = Car::find($id);
+
+    //     if($automobili){
+    //         $data = [
+    //             'automobile' => $automobili
+    //         ];
+    //         return view('cars.show', $data);
+    //     }
+
+    //     abort('404');
+    // }
+
+    //Secondo metodo con l'istanza
+    public function show(Car $car)
+    {
+        if($car){
             $data = [
-                'automobile' => $automobili
+                'automobile' => $car
             ];
             return view('cars.show', $data);
         }
 
         abort('404');
-        
     }
 
     /**
