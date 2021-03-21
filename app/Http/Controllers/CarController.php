@@ -130,9 +130,11 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Car $car)
     {
-        //
+        $data = $request->all();
+        $car->update($data);
+        return redirect()->route('cars.index', $car);
     }
 
     /**

@@ -5,9 +5,9 @@
 @section('content')
 <h1>Scegli l'automobile</h1>
 <div class="container">
-    <form action="" method="post">
+    <form action="{{ route('cars.update', $automobile->id) }}" method="post">
         @csrf
-        @method('POST')
+        @method('PUT')
         <div class="form-group">
           <label for="inputBrand">Marca</label>
           <input type="text" class="form-control" id="inputBrand" name="brand" value="{{ $automobile->brand }}">
@@ -32,7 +32,7 @@
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Modifica</button>
       </form>
 </div>
 @endsection
