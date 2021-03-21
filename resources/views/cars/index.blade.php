@@ -20,7 +20,10 @@
             <td>{{ $auto->brand }}</td>
             <td>{{ $auto->model }}</td>
             <td>{{ $auto->color }}</td>
-            <td><a href="{{ route('cars.show', ['car'=>$auto->id])}}">Dettagli</a></td>
+            <td>
+              <a href="{{ route('cars.show', ['car'=>$auto->id])}}" class="btn btn-info">Dettagli</a>
+              <a href="{{ route('cars.edit', ['car'=>$auto->id])}}" class="btn btn-warning">Modifica</a>
+            </td>
         </tr>    
         @endforeach
     </tbody>
